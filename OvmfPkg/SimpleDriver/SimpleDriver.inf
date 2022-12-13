@@ -1,0 +1,29 @@
+##
+# Copyright (c) 2021, Konstantin Aladyshev <aladyshev22@gmail.com>
+#
+# SPDX-License-Identifier: MIT
+##
+
+[Defines]
+  INF_VERSION                    = 1.25
+  BASE_NAME                      = SimpleDriver
+  FILE_GUID                      = 384aeb18-105d-4af1-bf17-5e349e8f4d4c
+  MODULE_TYPE                    = UEFI_DRIVER
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = SimpleDriverEntryPoint
+  UNLOAD_IMAGE                   = SimpleDriverUnload
+  PCI_VENDOR_ID                  = 0x1234
+  PCI_DEVICE_ID                  = 0x5678
+  PCI_CLASS_CODE                 = 0x0001
+  PCI_REVISION                   = 0x0002
+
+[Sources]
+  SimpleDriver.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiDriverEntryPoint
+  UefiLib
+

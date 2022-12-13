@@ -715,6 +715,7 @@
 #
 ################################################################################
 [Components]
+  OvmfPkg/SimpleDriver/SimpleDriver.inf
   OvmfPkg/ResetVector/ResetVector.inf
 
   #
